@@ -1,0 +1,35 @@
+.stats-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .15);
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.stats-icon {
+    width: 60px;
+    height: 60px;
+    background: #8b0000;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    font-size: 28px;
+}
+
+.stats-info h3 {
+    color: gray;
+    font-size: 16px;
+}
+
+.stats-info h2 {
+    color: #8b0000;
+    font-size: 32px;
+}
