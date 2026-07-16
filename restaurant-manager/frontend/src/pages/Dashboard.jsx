@@ -1,5 +1,6 @@
 import "./Dashboard.css";
-
+import TablesMap from "../components/TablesMap";
+import { reservations } from "../data/reservations"
 import StatsCard from "../components/StatsCard";
 
 function Dashboard() {
@@ -36,6 +37,26 @@ function Dashboard() {
 
             </div>
 
+            <h2 style={{ marginTop: "40px" }}>
+                Arrivi di oggi
+
+            </h2>
+
+            <div className="arrivals">
+                {reservations.map((reservation) => (
+                    <div className="arrival-card" key={reservation.id}>
+                        <h3>{reservation.customer}</h3>
+                        <p>🕒 {reservation.time}</p>
+
+                        <p>🍽 Tavolo {reservation.table}</p>
+
+                        <p>👥 {reservation.people} persone</p>
+
+                    </div>
+                ))}
+
+            </div>
+            <TablesMap />
         </div>
     );
 }

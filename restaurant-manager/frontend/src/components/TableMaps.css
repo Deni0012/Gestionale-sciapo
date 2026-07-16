@@ -1,0 +1,73 @@
+.tables-map {
+    margin-top: 40px;
+}
+
+.room {
+    margin-bottom: 40px;
+}
+
+.room h3 {
+    margin-bottom: 15px;
+    color: #8B0000;
+}
+
+.tables-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(6, 70px);
+
+    gap: 15px;
+
+}
+
+.table {
+
+    width: 70px;
+    height: 70px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.table:hover {
+
+    transform: scale(1.08);
+
+}
+
+.free {
+
+    background: #28a745;
+
+}
+
+.booked {
+
+    background: #ffc107;
+
+    color: black;
+
+}
+
+.busy {
+
+    background: #dc3545;
+
+}
+
+.out {
+
+    background: #6c757d;
+
+}

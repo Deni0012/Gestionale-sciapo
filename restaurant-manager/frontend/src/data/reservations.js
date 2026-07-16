@@ -1,0 +1,26 @@
+export const reservations = [
+    {
+        id: 1,
+        customer: "Mario Rossi",
+        phone: "3331234567",
+        people: 4,
+        room: "Sala",
+        table: 12,
+        date: "2026-07-16",
+        time: "20:00",
+        notes: "Compleanno",
+        status: "booked",
+    },
+    {
+        id: 2,
+        customer: "Anna Verdi",
+        phone: "3399876543",
+        people: 2,
+        room: "Patio",
+        table: 108,
+        date: "2026-07-16",
+        time: "20:30",
+        notes: "",
+        status: "booked",
+    },
+];
