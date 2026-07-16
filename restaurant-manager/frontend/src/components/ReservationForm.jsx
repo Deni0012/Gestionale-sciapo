@@ -20,7 +20,20 @@ function ReservationForm({ onAdd }) {
     }
 
     function handleSubmit(e) {
-        e.preventDeafult();
+        e.preventDefault();
+
+        onAdd(reservation);
+
+        setReservation({
+            date: "",
+            time: "",
+            customer: "",
+            phone: "",
+            people: "",
+            room: "Sala",
+            table: "",
+            notes: "",
+        })
 
         console.log(reservation);
     }
