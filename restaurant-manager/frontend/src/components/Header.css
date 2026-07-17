@@ -1,15 +1,52 @@
 .header {
-    background: #8b0000;
+    height: 80px;
+    background: linear-gradient(90deg, #7b1e1e, #5b1414);
     color: white;
-    padding: 20px;
-    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 40px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, .15);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
 }
 
 .header h1 {
-    font-size: 32px;
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
 }
 
 .header p {
-    margin-top: 5px;
+    margin: 4px 0 0;
+    font-size: 14px;
     opacity: .9;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-date {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.header-user {
+    background: rgba(255, 255, 255, .15);
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 600;
 }

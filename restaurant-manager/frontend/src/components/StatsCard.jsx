@@ -1,15 +1,33 @@
 import "./StatsCard.css";
 
-function StatsCard({ title, value, icon }) {
+function StatsCard({
+    title,
+    value,
+    icon,
+    subtitle,
+}) {
     return (
-        <div className="stats-card">
-            <div className="stats-icon">{icon}</div>
+        <article className="stats-card">
+            <div className="stats-icon">
+                {icon}
+            </div>
 
             <div className="stats-info">
-                <h3>{title}</h3>
-                <h2>{value}</h2>
+                <span className="stats-title">
+                    {title}
+                </span>
+
+                <strong className="stats-value">
+                    {value}
+                </strong>
+
+                {subtitle && (
+                    <span className="stats-subtitle">
+                        {subtitle}
+                    </span>
+                )}
             </div>
-        </div>
+        </article>
     );
 }
 

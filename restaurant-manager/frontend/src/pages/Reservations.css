@@ -1,0 +1,282 @@
+.reservations-page {
+    width: 100%;
+}
+
+.reservations-section {
+    margin-top: 40px;
+}
+
+.reservations-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.reservations-heading h2 {
+    color: #6f1818;
+    font-size: 28px;
+}
+
+.reservations-heading p {
+    margin-top: 5px;
+    color: #777;
+}
+
+.reservations-message {
+    padding: 30px;
+    border-radius: 16px;
+    background: white;
+    text-align: center;
+    color: #666;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.reservation-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,
+            minmax(360px, 1fr));
+    gap: 22px;
+}
+
+.reservation-card {
+    background: white;
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    border-left: 6px solid #8b0000;
+    text-align: left;
+    transition: 0.25s;
+}
+
+.reservation-card:hover {
+    transform: translateY(-3px);
+}
+
+.reservation-card h3 {
+    color: #8b0000;
+    margin-bottom: 15px;
+}
+
+.reservation-card p {
+    margin: 8px 0;
+    color: #444;
+}
+
+.reservation-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.reservation-number {
+    display: block;
+    margin-bottom: 6px;
+    color: #888;
+    font-size: 13px;
+}
+
+.reservation-status {
+    padding: 7px 11px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.status-booked {
+    background: #fff3cd;
+    color: #7a5b00;
+}
+
+.status-confirmed {
+    background: #f8d7da;
+    color: #842029;
+}
+
+.status-completed {
+    background: #d1e7dd;
+    color: #0f5132;
+}
+
+.status-cancelled {
+    background: #e2e3e5;
+    color: #41464b;
+}
+
+.reservation-details {
+    display: grid;
+    grid-template-columns: repeat(2,
+            minmax(0, 1fr));
+    gap: 8px 18px;
+}
+
+.reservation-details p {
+    margin: 0;
+    font-size: 15px;
+}
+
+.reservation-tables-row {
+    grid-column: 1 / -1;
+}
+
+.reservation-notes {
+    margin-top: 18px;
+    padding: 14px;
+    border-radius: 10px;
+    background: #faf4f4;
+}
+
+.reservation-notes p {
+    margin-top: 6px;
+}
+
+.reservation-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.reservation-actions button {
+    flex: 1;
+}
+
+.delete-button {
+    background: #555;
+}
+
+.delete-button:hover {
+    background: #333;
+}
+
+.form>form>div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-notes {
+    grid-column: 1 / -1;
+}
+
+.form-actions {
+    grid-column: 1 / -1;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 12px !important;
+}
+
+.form-actions button {
+    flex: 1;
+}
+
+.secondary-button {
+    background: #666;
+}
+
+.secondary-button:hover {
+    background: #444;
+}
+
+/* Selezione multipla tavoli */
+
+.tables-selection {
+    grid-column: 1 / -1;
+    padding: 18px;
+    border: 1px solid #e2d6d6;
+    border-radius: 14px;
+    background: #fcf9f9;
+}
+
+.tables-selection>label {
+    color: #5b1414;
+    font-size: 16px;
+}
+
+.table-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,
+            minmax(110px, 1fr));
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.table-option {
+    min-height: 44px;
+    padding: 10px 12px;
+    background: #ffffff;
+    color: #5b1414;
+    border: 2px solid #dccaca;
+    border-radius: 10px;
+    font-weight: 700;
+    box-shadow: none;
+}
+
+.table-option:hover {
+    background: #f2e4e4;
+    color: #5b1414;
+    border-color: #8b0000;
+    transform: none;
+}
+
+.table-option.selected {
+    background: #8b0000;
+    color: #ffffff;
+    border-color: #5b1414;
+}
+
+.table-option.selected:hover {
+    background: #a31313;
+    color: #ffffff;
+}
+
+.selected-tables {
+    margin-top: 16px;
+    padding: 12px 14px;
+    background: #f0dfdf;
+    color: #5b1414;
+    border-radius: 9px;
+}
+
+.form-help {
+    color: #26733b;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-error {
+    color: #a31313;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+@media (max-width: 700px) {
+    .reservation-card-header {
+        flex-direction: column;
+    }
+
+    .reservation-details {
+        grid-template-columns: 1fr;
+    }
+
+    .reservation-tables-row {
+        grid-column: auto;
+    }
+
+    .form-notes,
+    .form-actions,
+    .tables-selection {
+        grid-column: auto;
+    }
+
+    .form-actions {
+        flex-direction: column !important;
+    }
+
+    .table-options {
+        grid-template-columns: repeat(2,
+                minmax(0, 1fr));
+    }
+}
